@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_up</title>
+</head>
+<body>
+    <h1>Sign up</h1>
+    <form action="POST">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="cpassword">Confirm Password:</label>
+        <input type="password" id="cpassword" name="cpassword" required><br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+        </select><br><br>
+        <label for="phone">Phone:</label>
+        <input type="telephone" id="phone" name="phone" required><br><br>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        <label for="insert your photo">Insert your photo</label>
+        <input type="file" id="photo" name="photo" required><br><br>
+        <label for="insert your resume">Insert your resume</label>
+        <input type="file" id="resume" name="resume" required><br><br>
+        <label for="insert your signature">Insert your signature</label>
+        <input type="file" id="signature" name="signature" required><br><br>
+        <label for="Security Question">Security Question</label>
+        <select id="security_question" name="security_question">
+            <option value="What is your favorite color?">What is your favorite color?</option>
+            <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+            <option value="What is your pet's name?">What is your pet's name?</option>
+            <option value="What is your favorite movie?">What is your favorite movie?</option>
+            <option value="What is your favorite food?">What is your favorite food?</option>
+            <option value="What is your favorite song?">What is your favorite song?</option>
+            <option value="What is your favorite book?">What is your favorite book?</option>
+            <option value="What is your favorite sport?">What is your favorite sport?</option>
+            <option value="What is your favorite animal?">What is your favorite animal?</option>
+            <option value="What is your favorite place?">What is your favorite place?</option>
+            <option value="What is your favorite movie?">What is your favorite movie?</option>
+            <option value="What is your favorite food?">What is your favorite food?</option>
+            <option value="What is your favorite song?">What is your favorite song?</option>
+            <option value="What is your favorite book?">What is your favorite book?</option>
+            <option value="What is your favorite sport?">What is your favorite sport?</option>
+            <option value="What is your favorite animal?">What is your favorite animal?</option>
+            <option value="What is your favorite place?">What is your favorite place?</option>
+        </select><br><br>
+        <label for="Security Answer">Security Answer</label>
+        <input type="text" id="security_answer" name="security_answer" required><br><br>
+        <input type="checkbox" id="terms" name="terms" required>    
+        <label for="terms">I agree to the terms and conditions</label><br><br>
+    <input type="submit" value="Register">
+    </form>
+    
+</body>
+</html>

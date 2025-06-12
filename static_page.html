@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Lemon</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            
+            background-color: #f4eddb;
+
+
+        }
+        .header-cont {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .tops {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 32px;
+            font-weight: 100;
+            margin: 0;
+            flex-grow: 1;
+            text-align: left;
+            color: #313131;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px 20px;
+            background-color: #edefee;
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #333333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #570303
+
+            ;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            color: #2c4b41;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card-title {
+            color: #495e57;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            color: #666;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #f4ce14;
+            color: #333;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+        .alert {
+            padding: 15px;
+            background-color: #edefee;
+            border-left: 5px solid #2300d0;
+            margin-bottom: 20px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        .col-12, .col-lg-6 {
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        .col-12 {
+            width: 100%;
+        }
+        @media (min-width: 992px) {
+            .col-lg-6 {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-cont">
+        <img src="logo.jpg" alt="logo" width="120" height="120">
+        <h1 class="tops">Little Lemon</h1>
+    </div>
+</header>
+<nav>
+    <a href="">Home</a>
+    <a href="">Menu</a>
+    <a href="">Book</a>
+    <a href="">About</a>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <h1 style="color: #072d20;">Our Menu</h1>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <img src="asserts/download.jpeg" class="card-img-top" alt="Noodles" />
+                        <div class="card-body">
+                            <h2 class="card-title">Noodles</h2>
+                            <p class="card-text">Noodles spices salt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <img src="asserts/calamari.jpeg" class="card-img-top" alt="calamari" />
+                        <div class="card-body">
+                            <h2 class="card-title">Fried Calamari</h2>
+                            <p class="card-text">squid buttermilk</p>
+                            <h3><span class="badge" id="box">New</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <img src="asserts/burger.jpeg" class="card-img-top" alt="burger" />
+                        <div class="card-body">
+                            <h2 class="card-title">Burger</h2>
+                            <p class="card-text">Burger veggies salt tomato</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <h2>Prices</h2>
+            <table class="table">
+                <tr>
+                    <td>Noodles</td>
+                    <td>$12.00</td>
+                </tr>
+                <tr>
+                    <td>Fried Calamari</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>burger</td>
+                    <td>$15.00</td>
+                </tr>
+            </table>
+            <div class="alert">Try our new Fried Calamari!</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
