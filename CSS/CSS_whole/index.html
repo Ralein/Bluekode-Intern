@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+
+    }
+
+    h1 {
+      text-align: center;
+      color: #000000;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      color: #333;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .box-group {
+      border: 2px solid #ddd;
+      padding: 10px;
+      background: white;
+      width: 150px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .boxes {
+      display: flex;
+      gap: 5px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .box {
+      background-color: #f26161;
+      border-radius: 10%;
+      width: 20px;
+      height: 40px;
+    }
+
+    .column .box {
+      height: 20px;
+      width: 40px;
+    }
+
+    .center {
+      justify-content: center;
+    }
+
+    .flex-start {
+      justify-content: flex-start;
+    }
+
+    .flex-end {
+      justify-content: flex-end;
+    }
+
+    .space-between {
+      justify-content: space-between;
+    }
+
+    .space-around {
+      justify-content: space-around;
+    }
+
+    .space-evenly {
+      justify-content: space-evenly;
+    }
+
+    .align-start {
+      align-items: flex-start;
+    }
+
+    .align-end {
+      align-items: flex-end;
+    }
+
+    .align-center {
+      align-items: center;
+    }
+
+    .stretch {
+      align-items: stretch;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .row-reverse {
+      flex-direction: row-reverse;
+    }
+
+    .column-reverse {
+      flex-direction: column-reverse;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Flexbox</h1>
+
+  <div class="section">
+    <h2>flex-direction</h2>
+    <div class="flex-container">
+      <div class="box-group">
+        <div class="boxes">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>row</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes column">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>column</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes row-reverse">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>row-reverse</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes column column-reverse">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>column-reverse</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>align-items</h2>
+    <div class="flex-container">
+      <div class="box-group">
+        <div class="boxes align-start" style="height: 60px;">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>flex-start</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes align-center" style="height: 60px;">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>center</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes align-end" style="height: 60px;">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>flex-end</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes stretch" style="height: 60px;">
+          <div class="box" style="height: auto;"></div>
+          <div class="box" style="height: auto;"></div>
+          <div class="box" style="height: auto;"></div>
+        </div>
+        <div>stretch</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>justify-content</h2>
+    <div class="flex-container">
+      <div class="box-group">
+        <div class="boxes flex-start">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>flex-start</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes center">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>center</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes flex-end">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>flex-end</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes space-between">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>space-between</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes space-around">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>space-around</div>
+      </div>
+      <div class="box-group">
+        <div class="boxes space-evenly">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>space-evenly</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>align-content</h2>
+    <div class="flex-container" style="height: 140px;">
+      <div class="box-group" style="height: 120px;">
+        <div class="boxes" style="flex-wrap: wrap; align-content: flex-start; height: 100px; flex-direction: row; flex-flow: row wrap;">
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>flex-start</div>
+      </div>
+      <div class="box-group" style="height: 120px;">
+        <div class="boxes" style="flex-wrap: wrap; align-content: center; height: 100px; flex-direction: row; flex-flow: row wrap;">
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>center</div>
+      </div>
+      <div class="box-group" style="height: 120px;">
+        <div class="boxes" style="flex-wrap: wrap; align-content: flex-end; height: 100px; flex-direction: row; flex-flow: row wrap;">
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>flex-end</div>
+      </div>
+      <div class="box-group" style="height: 120px;">
+        <div class="boxes" style="flex-wrap: wrap; align-content: space-between; height: 100px; flex-direction: row; flex-flow: row wrap;">
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>space-between</div>
+      </div>
+      <div class="box-group" style="height: 120px;">
+        <div class="boxes" style="flex-wrap: wrap; align-content: space-around; height: 100px; flex-direction: row; flex-flow: row wrap;">
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>space-around</div>
+      </div>
+      <div class="box-group" style="height: 120px;">
+        <div class="boxes" style="flex-wrap: wrap; align-content: stretch; height: 100px; flex-direction: row; flex-flow: row wrap;">
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box" style="margin-bottom: 5px;"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>stretch</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
