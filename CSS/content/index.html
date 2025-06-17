@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Content</title>
+  <meta charset="UTF-8">
+  <title>Three Column Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+
+    }
+
+
+
+    .header {
+      padding: 20px;
+      font-size: 24px;
+      text-align: center;
+      background-color: skyblue;
+    }
+
+   
+
+    .footer {
+        padding: 50px;
+        font-size: 24px;
+        text-align: center;
+        background-color: #9932cc; 
+    }
+
+    .content {
+      display: flex;
+      height: 403px;
+    }
+
+    .left {
+      flex: 1;
+      background-color: #ff4500; /* Red */
+      padding: 20px;
+      color: white;
+    }
+
+    .main {
+      flex: 2;
+      background-color: #32cd32; /* Green */
+      padding: 20px;
+      color: white;
+    }
+
+    .right {
+      flex: 1;
+      background-color: #ffd700; 
+      padding: 20px;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <header>
-<h1 class="head">Header</h1>
-    </header><nav class="nav">
-    <h1>Right Side</h1>
-</nav>
-<aside class="aside">
-    <h1>Main</h1>
-</aside>
-    <article class="art">
-       <h1>Right Side</h1> 
-    </article>
-    <footer class="foot">
-       <h1>Footer</h1> 
-    </footer>
 
-    
+  <div class="header"><h1>Header</h1></div>
+
+  <div class="content">
+    <div class="left"><h1>Left sidebar</h1></div>
+    <div class="main"><h1>Main content</h1></div>
+    <div class="right"><h1>Right sidebar</h1></div>
+  </div>
+
+  <div class="footer">
+  <h1>Footer</h1>
+</div>
+
 </body>
 </html>
