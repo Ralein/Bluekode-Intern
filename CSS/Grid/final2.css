@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    left: 85%;
+}
+
+body {
+    background-color: #2a2a2a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: white;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.showcase-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.grid-demo {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+
+.grid-demo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: #f0f0f0;
+    border-radius: 12px 12px 0 0;
+}
+
+.grid-demo::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f57;
+    box-shadow: 20px 0 0 #28ca42;
+}
+
+.grid-content {
+    display: grid;
+    gap: 8px;
+    height: calc(100% - 40px);
+    margin-top: 40px;
+}
+
+
+.grid-item {
+    border-radius: 4px;
+}
+
+.red {
+    background-color: #ff6b6b;
+}
+
+.orange {
+    background-color: #ffa726;
+}
+
+.yellow {
+    background-color: #ffcc02;
+}
+
+.green {
+    background-color: #218140;
+
+}
+
+.light-green {
+    background-color: #3d9942;
+}
+
+.cyan {
+    background-color: #66f7a5;
+}
+
+
+
+
+
+.layout-1 {
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+
+.layout-2 {
+
+
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.layout-2 .grid-item:first-child {
+    grid-column: 3 / 3;
+    grid-row: 3 / 1;
+
+
+
+}
+
+.layout-2 .grid-item:nth-child(3) {
+    grid-row: 1 / 1;
+    grid-column: 1 / -2;
+
+
+
+
+}
+
+
+
+
+
+.layout-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+}
+
+.layout-3 .grid-item:nth-child(1) {
+
+    grid-column: 1/4;
+
+}
+
+.layout-3 .grid-item:nth-child(4) {
+
+    grid-column: 1/4;
+
+}
+
+.layout-3 .grid-item:nth-child(3) {
+    grid-column: 2 / -1;
+
+}
+
+
+
+.layout-4 {
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.layout-4 .grid-item:first-child {
+    grid-column: 1 / 3;
+}
+
+.layout-4 .grid-item:last-child {
+    grid-column: 1 /-1;
+}
+
+.layout-4 .grid-item:nth-child(3) {
+
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+
+
+
+}
+
+
+.layout-5 {
+    grid-template-columns: repeat(6, 1fr);
+
+}
+
+
+.layout-6 {
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.layout-6 .grid-item:nth-child(1) {
+    grid-column: 1 / 3;
+}
+
+.layout-6 .grid-item:nth-child(2) {
+    grid-column: 3 / 4;
+}
+
+.layout-6 .grid-item:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+}
+
+.layout-6 .grid-item:nth-child(4) {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+.layout-6 .grid-item:nth-child(5) {
+    grid-column: 3 / 5;
+}
+
+
+
+
+
+
+
+.layout-7 {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+
+}
+
+
+
+
+
+
+
+.layout-7 .grid-item:first-child {
+    grid-column: 1 / -1;
+}
+
+.layout-7 .grid-item:nth-child(2) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 5;
+
+}
+
+.layout-7 .grid-item:nth-child(6) {
+    grid-column: 3 / 5;
+
+}
+
+.layout-7 .grid-item:nth-child(4) {
+    grid-column: 3 / 6;
+    grid-row: 2 / 2;
+}
+
+.layout-7 .grid-item:nth-child(5) {
+    grid-column: 5 / -2;
+    grid-row: 3 / -2;
+
+
+}
+
+.layout-7 .grid-item:nth-child(3) {
+    grid-row: 5 / -3;
+    grid-column: 6 / 3;
+
+
+}
+
+.layout-7 .grid-item:nth-child(7) {
+    grid-row: 3 / -2;
+    grid-column: 3 / 3;
+
+
+
+}
+
+
+
+
+
+.layout-8 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.layout-8 .grid-item:first-child {
+    grid-column: 1 / -1;
+}
+
+.layout-8 .grid-item:nth-child(2) {
+    grid-row: 2 / -1;
+}
+
+.layout-8 .grid-item:nth-child(5) {
+    grid-column: 2 / -1;
+}
+
+.layout-9 {
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.layout-9 .grid-item:first-child {
+    grid-column: 1 / -1;
+
+
+}
+
+.layout-9 .grid-item:nth-child(2) {
+    grid-column: 2 / -1;
+    grid-row: 2 / 2;
+
+
+
+
+
+}
+
+.layout-9 .grid-item:nth-child(4) {
+    grid-row: 2 / 4;
+
+
+
+}
+
+
+
+
+
+.title {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+    .showcase-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
